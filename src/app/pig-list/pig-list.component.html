@@ -1,0 +1,60 @@
+<main>
+    <div id="mapid" style="width:100%;height:400px"></div>
+    
+    <section class="summary">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <th>Location<img src="../assets/sort-down.svg" class="sortIcon" (click)="sortLocation()"></th>
+                <th>Reported By<img src="../assets/sort-down.svg" class="sortIcon" (click)="sortName()"></th>
+                <th>Time Reported<img src="../assets/sort-down.svg" class="sortIcon" (click)="sortAddedOn()"></th>
+                <th>Status</th>
+                <th>Retrieved</th>
+                <th>Add'l Info</th>
+                <th>Remove</th>
+            </thead>
+            <tbody class="table-group-divider">
+                <tr *ngFor="let p of pig">
+                    <td>{{ p.locName }} </td>
+                    <td>{{ p.name }}</td>
+                    <td>{{ p.added_on | date: 'short'}} </td>
+                    <td>{{ p.status }} 
+
+                        <!-- <button 
+                        class="btn btn-outline-success btn-sm"
+                        id="edit"
+                        (click)="onRetrieve($event,p)"
+                        >RETRIEVE</button> -->
+            
+                    </td>
+                    <td>
+                        <i class="bi bi-check-square-fill" id="retrieve" (click)="onRetrieve($event,p)" *ngIf="p.status=='READY FOR PICKUP'" ></i>
+                    </td>
+                    <td>
+                        <!-- <button 
+                        class="btn btn-outline-primary btn-sm"
+                        id="moreinfo"
+                        (click)="onInfo($event,p)"
+                        >MORE INFO</button> -->
+                        <i class="bi bi-info-square-fill" id="delete" (click)="onInfo($event,p)"></i>
+                    </td>
+                        
+                    <td>
+                        <!-- <button 
+                        class="btn btn-outline-danger btn-sm"
+                        id="delete"
+                        (click)="onDelete($event,p)"
+                        >DELETE</button> -->
+                        <i class="bi bi-x-square-fill" id="delete" (click)="onDelete($event,p)"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <button class="btn btn-outline-primary"
+    (click)="onAdd($event)"
+    id = "addReportBtn"
+    >Add Pig Report</button>
+
+</main>
+

@@ -1,0 +1,61 @@
+<h2>More Information</h2>
+
+<table class ="table table-bordered table-hover">
+    <tbody>
+        <tr>
+            <th colspan="2" class="table-light">Reporter Information</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>{{ name }}</td>
+        </tr>
+        <tr>
+            <td>Phone Number</td>
+            <td>{{ phoneNo }}</td>
+        </tr>
+        <tr>
+            <th colspan="2" class="table-light">Pig Details</th>
+        </tr>
+        <tr>
+            <td>ID Number</td>
+            <td>{{ pid }}</td>
+        </tr>
+        <tr>
+            <td>Breed</td>
+            <td>{{ breed }}</td>
+        </tr>
+        <tr>
+            <th colspan="2" class="table-light">Location Details</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>{{ locName }}</td>
+        </tr>
+        <tr>
+            <td>Longitude</td>
+            <td>{{ long }}</td>
+        </tr>
+        <tr>
+            <td>Latitude</td>
+            <td>{{ lat }}</td>
+        </tr>
+        <tr>
+            <th colspan="2" class="table-light">Additional Information</th>
+        </tr>
+        <tr>
+            <td>Extra Notes</td>
+            <td>{{ notes }}</td>
+        </tr>
+        <tr>
+            <td>Reported Created</td>
+            <td>{{ added_on | date: 'short'}}</td>
+        </tr>
+        
+        <tr>
+            <td>Status</td>
+            <td>{{ status }} </td>
+        </tr>
+    </tbody>
+</table>
+
+<button class="btn btn-outline-secondary" (click)="onBack($event)">BACK</button>

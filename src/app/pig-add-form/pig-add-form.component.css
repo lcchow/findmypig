@@ -1,0 +1,44 @@
+body  {
+    display:flex;
+    justify-content:left;
+    flex-wrap:wrap;
+    margin-left:1rem;
+}
+
+h2 {
+    text-align: left;
+    flex:100%
+}
+
+main {
+    display:flex;
+    justify-content:left;
+    flex-wrap:wrap;
+    flex:100%;
+
+}
+
+form {
+    display:flex;
+    justify-content:left;
+    flex-wrap:wrap;
+    width: 50%;
+    margin: 1rem
+}
+
+table {
+    width: 70%;
+    flex:100%;
+}
+
+button {
+    width: 290px;
+}
+
+#cancelBtn {
+    margin-left: 1rem;
+}
+
+.required {
+    color: red;
+}
